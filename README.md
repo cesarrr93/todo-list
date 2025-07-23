@@ -1,12 +1,14 @@
-# React + Vite
+# Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a todo list application. We are using SPA and vite frame work. I am using esling and prettier configs.
 
-Currently, two official plugins are available:
+## Instalation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+clone repository using SSH.
+In terminal use command git clone and paste link provided in github for ssh.
+Cd into clone repository.
 
-## Expanding the ESLint configuration
+## How to run server
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+use command npm install.
+use command npm run dev to locally host the application.
