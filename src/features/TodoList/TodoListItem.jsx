@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TextInputWithLabel } from '../../shared/TextInputWithLabel';
 
 // Object is passdown to function
@@ -21,6 +21,10 @@ function TodoListItem({ todo, onCompleteTodo, onUpdateTodo }) {
         onUpdateTodo({ ...todo, title: workingTitle });
         setIsEditing(false);
     };
+
+    useEffect(() => {
+        setWorkingTitle(todo.title);
+    }, [todo]);
     return (
         <li>
             {isEditing ? (
