@@ -1,4 +1,4 @@
-import { TextInputWithLabel } from '../shared/TextInputWithLabel'
+import TextInputWithLabel from '../shared/TextInputWithLabel'
 import { useRef, useState } from 'react';
 
 function TodoForm({ onAddTodo, isSaving }) {

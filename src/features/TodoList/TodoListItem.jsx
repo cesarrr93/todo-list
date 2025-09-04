@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { TextInputWithLabel } from '../../shared/TextInputWithLabel';
+import TextInputWithLabel from '../../shared/TextInputWithLabel';
 
 // Object is passdown to function
 function TodoListItem({ todo, onCompleteTodo, onUpdateTodo }) {

@@ -12,13 +12,13 @@ function App() {
   const url = `https://api.airtable.com/v0/${import.meta.env.VITE_BASE_ID}/${import.meta.env.VITE_TABLE_NAME}`;
   const token = `Bearer ${import.meta.env.VITE_PAT}`;
 
-  const addTodo = async (newTodo) => {
+  const addTodo = async (title) => {
     const payload = {
       records: [
         {
           fields: {
-            title: newTodo.title,
-            isCompleted: newTodo.isCompleted,
+            title: title,
+            isCompleted: false,
           }
         }
       ]
@@ -37,7 +37,7 @@ function App() {
       setIsSaving(true);
       const resp = await fetch(url, options);
       if (!resp.ok) {
-        throw new Error(resp.message);
+        throw new Error(resp.statusText);
       }
       const { records } = await resp.json();
       const savedTodo = {
@@ -95,7 +95,7 @@ function App() {
       setIsSaving(true);
       const resp = await fetch(url, options);
       if (!resp.ok) {
-        throw new Error(resp.message);
+        throw new Error(resp.statusText);
       }
     } catch (error) {
       console.log(error);
@@ -140,7 +140,7 @@ function App() {
     try {
       const resp = await fetch(url, options);
       if (!resp.ok) {
-        throw new Error(resp.message);
+        throw new Error(resp.statusText);
       }
     } catch (error) {
       console.log(error);
@@ -181,7 +181,7 @@ function App() {
       try {
         const resp = await fetch(url, options);
         if (!resp.ok) {
-          throw new Error(resp.message);
+          throw new Error(resp.statusText);
         }
         
         const {records} = await resp.json();
